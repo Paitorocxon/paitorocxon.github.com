@@ -1,14 +1,23 @@
 body {
-  font-size: 40pt;
-  background-color: rgb(80,80,80);
-  color: #FFF;
-  margin: 50px;
-  padding: 50px;
+    font-family: 'DaFontFont';
+    font-size: 30pt;
+    background-color: rgb(80,80,80);
+    color: #FFF;
+    margin: 50px;
+    padding: 50px;
+    text-shadow: 1px 3px 0px #000;
 }
+
+@font-face {
+    font-family: 'DaFontFont';
+    src: url('A_Font_with_Serifs.ttf');
+}
+
 a{
-  text-decoration: none;
-  color: #DA0;
+    text-decoration: none;
+    color: #DA0;
 }
+
 hr {
-  color: #DA0;
+    color: #DA0;
 }
