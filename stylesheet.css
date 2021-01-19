@@ -103,8 +103,19 @@ navbar a:hover {
     transition: all ease-in-out 0.2s;
 }
 
+.imagecontainer {
+    text-align: justify;
+}
 .imagecontainer img{
     height: 64px;
+    display:inline-block;
+    padding: 20px;
+}
+.imagecontainer:after {
+    content:"";
+    display: inline-block;
+    width: 100%;
+    height: 0;
 }
 .imagecontainer a, .imagecontainer a:hover{
     text-decoration: none;
