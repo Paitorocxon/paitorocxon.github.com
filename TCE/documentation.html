@@ -1,284 +1,0 @@
-<!DOCTYPE html>
-<HTML>
-    <HEAD>
-        <link REL="stylesheet" type="text/css" href="styles/stylesheet.css">
-        <Title>Toecramp Engine Documentation</title>
-        <meta name="title" content="Toecramp Engine Documentation">
-        <meta name="author" content="Paitorocxon">
-        <meta name="publisher" content="Paitorocxon">
-        <meta name="copyright" content="Paitorocxon 2021">
-        <meta charset="UTF-8">
-    </HEAD>
-    <BODY>
-    <div class="navbar"> <a href="index.html">Introduction</a> <a href="about.html">About</a> <a href="documentation.html">Documentation</a> <div class="logo">Toecramp Engine<img src="img/logo.png">            </div></div>
-
-
- 
- 
-    <div class="codebox">
-        <h1 style="display: inline-block; margin-right: 20px;">
-            Documentation
-        </h1>
-             <div class="dropdown">
-      <button class="dropbtn">Jump to ...</button>
-      <div class="dropdown-content">
-            <a href="#_VERSION"><div class="highlight">engine.</div>_VERSION</a>
-            <a href="#SpritesDatabase"><div class="highlight">engine.</div>SpritesDatabase</a>
-            <a href="#Resolution"><div class="highlight">engine.</div>Resolution</a>
-            <a href="#Max_FPS"><div class="highlight">engine.</div>Max_FPS</a>
-            <a href="#MAX_MEMORY"><div class="highlight">engine.</div>MAX_MEMORY</a>
-            <a href="#NoBackground"><div class="highlight">engine.</div>NoBackground</a>
-            <a href="#DisableWarnings"><div class="highlight">engine.</div>DisableWarnings</a>
-            <a href="#SceneUpdated"><div class="highlight">engine.</div>SceneUpdated</a>
-            <a href="#ParticleMaximum"><div class="highlight">engine.</div>ParticleMaximum</a>
-            <a href="#DrawnSprites"><div class="highlight">engine.</div>DrawnSprites</a>
-            <a href="#Camera"><div class="highlight">engine.</div>Camera</a>
-            <a href="#SetParticleAnimationSpeed"><div class="highlight">engine.</div>SetParticleAnimationSpeed</a>
-            <a href="#FPS"><div class="highlight">engine.</div>FPS</a>
-            <a href="#ParticleCount"><div class="highlight">engine.</div>ParticleCount</a>
-            <a href="#Frame"><div class="highlight">engine.</div>Frame</a>
-            <a href="#SetScreen"><div class="highlight">engine.</div>SetScreen</a>
-            <a href="#SpriteCount"><div class="highlight">engine.</div>SpriteCount</a>
-            <a href="#SetParticleSpeed"><div class="highlight">engine.</div>SetParticleSpeed</a>
-            <a href="#ChangeSpriteImage"><div class="highlight">engine.</div>ChangeSpriteImage</a>
-            <a href="#Initialize"><div class="highlight">engine.</div>Initialize</a>
-            <a href="#StopEngine"><div class="highlight">engine.</div>StopEngine</a>
-            <a href="#Reinitialize"><div class="highlight">engine.</div>Reinitialize</a>
-            <a href="#AddSprite"><div class="highlight">engine.</div>AddSprite</a>
-            <a href="#AddSpriteToDatabase"><div class="highlight">engine.</div>AddSpriteToDatabase</a>
-            <a href="#RemoveSprite"><div class="highlight">engine.</div>RemoveSprite</a>
-            <a href="#MoveCamera"><div class="highlight">engine.</div>MoveCamera</a>
-            <a href="#AddExplosionParticle"><div class="highlight">engine.</div>AddExplosionParticle</a>
-            <a href="#AddSwirlingParticle"><div class="highlight">engine.</div>AddSwirlingParticle</a>
-            <a href="#MoveSprite"><div class="highlight">engine.</div>MoveSprite</a>
-            <a href="#LookingAtPoint"><div class="highlight">engine.</div>LookingAtPoint</a>
-            <a href="#RotateImage"><div class="highlight">engine.</div>RotateImage</a>
-            <a href="#ResizeImage"><div class="highlight">engine.</div>ResizeImage</a>
-            <a href="#CropBitmap"><div class="highlight">engine.</div>CropBitmap</a>
-            <a href="#GetAngleFromPlayerToCursor"><div class="highlight">engine.</div>GetAngleFromPlayerToCursor</a>
-      </div>
-    </div> 
-        <sub><sub><sub><sub>(ATM only the "engine" class is documented. More will follow in the future.)</sub></sub></sub></sub>
-        <br><br>
-       
-
-
-    
-    
-        <div class="content" style="height: calc(100vh - 30vh);overflow-y: scroll;">
-        <br>
-           <a name="_VERSION"></a>
-            <div class="object">The Version-Code of TCE.
-            <div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Const</span> _VERSION <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span> = <span class="hljs-string" style="color: #EFF489">"ToeCrampEngine - Pro 1.0.3"</span>
-
-
-            </div></div><a name="SpritesDatabase"></a>
-            <div class="object">This is the Sprites-Database in wich every sprite will be saved in. Requires a name (as string) and the image (as image).<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> SpritesDatabase <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> Dictionary(<span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Of</span> <span class="hljs-built_in">String</span>, <font color="#6A9AF8">System.Drawing.Image</font>)
-
-
-            </div></div><a name="Resolution"></a>
-            <div class="object">The Game-Screen Resolution. It can be what ever you want as long as you do not use the ToeCrampEngine.Resolution Class.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> Resolution <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Size</font>
-
-
-            </div></div><a name="Max_FPS"></a>
-            <div class="object">This is a (somehow) useless variable. But technically it should set a cap of how many frames ar permitted to be rendered.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> Max_FPS <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-            </div></div><a name="MAX_MEMORY"></a>
-            <div class="object">Define what the maximum Memory-Usage of your game should be. Because it has to be a long, you should do something like Memory in Gigabyte * 1.000.000.000. Example: 2 GB = 2 * 1.000.000.000.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> MAX_MEMORY <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Long</span>
-
-            </div></div><a name="NoBackground"></a>
-            <div class="object">If True then TCE will take care of a background.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> NoBackground <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Boolean</span>
-
-            </div></div><a name="DisableWarnings"></a>
-            <div class="object">Disables Warnings.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> DisableWarnings <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Boolean</span>
-
-
-            </div></div><a name="SceneUpdated"></a>
-            <div class="object">Normally if you change something like sprites, move sprites, etc, TCE will update the screen itself. Sometimes it necessary to update it manually.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> SceneUpdated <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Boolean</span>
-
-
-            </div></div><a name="ParticleMaximum"></a>
-            <div class="object">Defines how many particles are allowed in the game. Standard is 1024.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> ParticleMaximum <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-
-            </div></div><a name="DrawnSprites"></a>
-            <div class="object">(Will be a property in the future) Defines how many sprites are drawn on the screen.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> DrawnSprites <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-            </div></div><a name="Camera"></a>
-            <div class="object">Gives you the camera-location.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">ReadOnly</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> Camera <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>
-
-            </div></div><a name="SetParticleAnimationSpeed"></a>
-            <div class="object">Defines how fast a particle is moving once per particle-tick. E.g.: if the particle-speed is 20, then it will move 20px.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> SetParticleAnimationSpeed <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-
-            </div></div><a name="FPS"></a>
-            <div class="object">Gives Frames per second.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">ReadOnly</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> FPS <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-
-            </div></div><a name="ParticleCount"></a>
-            <div class="object">Gives you the total amount of Particles.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">ReadOnly</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> ParticleCount <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-            </div></div><a name="Frame"></a>
-            <div class="object">Gives you the last rendered Frame.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">ReadOnly</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> Frame <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>
-
-
-            </div></div><a name="SetScreen"></a>
-            <div class="object">Set the Screen on wich the engine will render the game. It has to be a picturebox.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">WriteOnly</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> SetScreen <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">PictureBox</font>
-
-            </div></div><a name="SpriteCount"></a>
-            <div class="object">Gives you the total amount of sprites loaded into the project.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">ReadOnly</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> SpriteCount <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-
-            </div></div><a name="SetParticleSpeed"></a>
-            <div class="object">Sets the particle timer interval in milliseconds.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Property</span> SetParticleSpeed <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>
-
-
-            </div></div><a name="ChangeSpriteImage"></a>
-            <div class="object">Changes the image of a sprite inside the SpritesDatabase.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> ChangeSpriteImage(Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>, ImageDB_Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>)
-
-
-            </div></div><a name="Initialize"></a>
-            <div class="object">Initializes the engine.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> Initialize()
-
-
-            </div></div><a name="StopEngine"></a>
-            <div class="object">Stops the engine.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> StopEngine()
-
-
-            </div></div><a name="Reinitialize"></a>
-            <div class="object">Reinitializes the engine. not recommended to use, because of bugs that are yet to be fixed.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> Reinitialize()
-
-
-            </div></div><a name="AddSprite"></a>
-            <div class="object">Adds a sprite to the "Map" or screen.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> AddSprite(Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>, Position <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>, Z <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Single</span>, ImageDB_Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>)
-
-            </div></div><a name="AddSpriteToDatabase"></a>
-            <div class="object">Adds a sprite to the SpritesDatabase.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> AddSpriteToDatabase(Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>, ImageFile <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>)
-
-
-            </div></div><a name="RemoveSprite"></a>
-            <div class="object">Removes every sprites with the given name.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> RemoveSprite(Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>)
-
-
-            </div></div><a name="MoveCamera"></a>
-            <div class="object">Moves the camera to its new location.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> MoveCamera(NewPosition <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>)
-
-            </div></div><a name="AddExplosionParticle"></a>
-            <div class="object">Creates a explosion effect.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> AddExplosionParticle(Particle <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>, pos <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>, Count <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, Lifetime <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, Speed <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>)
-
-
-            </div></div><a name="AddSwirlingParticle"></a>
-            <div class="object">Creates a swirling particles effect.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> AddSwirlingParticle(Particle <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>, pos <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>, Count <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, Lifetime <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, Speed <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>)
-
-
-            </div></div><a name="MoveSprite"></a>
-            <div class="object">Moves every sprite with the given name to the given location.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Sub</span> MoveSprite(Name <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">String</span>, NewPosition <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>)
-
-            </div></div><a name="LookingAtPoint"></a>
-            <div class="object">Gives back the angle of two points. Can be used to make the player look to the mouse cursor.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Function</span> LookingAtPoint(position <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>, angle <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Double</span>, length <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Double</span>) <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>
-
-
-            </div></div><a name="RotateImage"></a>
-            <div class="object">Gives back the image rotated by the given angle.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Function</span> RotateImage(image <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>, angle <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>) <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>
-
-
-            </div></div><a name="ResizeImage"></a>
-            <div class="object">Resizes a image.<div class="code">
-
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Function</span> ResizeImage(InputImage <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>, size_ <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Size</font>) <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Image</font>
-
-            </div></div><a name="CropBitmap"></a>
-            <div class="object">Crops a bitmap.<div class="code">
-
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Function</span> CropBitmap(<span class="hljs-keyword" style="color: #E03616; font-weight: bold;">ByRef</span> bmp <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Bitmap</font>, cropX <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, cropY <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, cropWidth <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>, cropHeight <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Integer</span>) <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Bitmap</font>
-
-
-            </div></div><a name="GetAngleFromPlayerToCursor"></a>
-            <div class="object">Gives the angle of a point on the screen to the mouse cursor. Can also be used to get the angle between two points. Just set the cursor_postion to the second location.<div class="code">
-            <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Public</span> <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">Function</span> GetAngleFromPlayerToCursor(player_position <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>, playersize <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Size</font>, cursor_position <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <font color="#6A9AF8">System.Drawing.Point</font>) <span class="hljs-keyword" style="color: #E03616; font-weight: bold;">As</span> <span class="hljs-built_in">Double</span>
-            </div></div>
-            
-            
-            <div class="object">
-            <center>More will follow…</center>
-            </div></div>
-        </div>
-    </div>
-    
-    </div>
-        <div class="footer">Copyright © 2021 Fabian Müller & Viktoria Schmieder. <br><sub>All contents delivered on this site is property of Fabian Müller and Viktoria Schmieder.</sub></div>
-
-    </BODY>
-</HTML>
